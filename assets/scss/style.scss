@@ -1,0 +1,300 @@
+// 
+// Import
+// ________________________________
+@import './common/variables';
+@import './common/mixins';
+
+@import './common/reset';
+@import './common/normalize';
+
+@import './common/typography';
+
+
+//
+// Test
+// __________________________
+.opensans-text {
+    font-family: $font-family__opensans;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 50px;
+}
+
+.montserrat-text {
+    font-family: $font-family__montserrat;
+    font-size: 15px;
+    font-weight: 700;
+    padding-left: 50px;
+}
+
+.pacifico-text {
+    font-family: $font-family__pacifico;
+    font-size: 30px;
+    font-weight: 400;
+    padding-left: 50px;
+}
+
+
+
+//
+// Styles
+// _______________________
+html {
+    //font-size: 62.5%;
+}
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: content-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: auto;
+}
+
+.wrapper {
+    border: 1px solid black;
+    max-width: 1920px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: 1px solid #dddddd;
+    &__top {
+        padding: 16px 30px 14px 29px;
+        @include flex(center, space-between);
+        font-family: $font-family__opensans;
+        font-size: 14px;
+        background-color: #222222;
+        a {
+            color: #525252;
+        }
+        &-welcome {
+            word-spacing: 1px;
+            i {
+                margin-right: 2px;
+                font-size: 13px;
+            }
+            span {
+                margin-left: 4px;
+            }
+        }
+        &-list {
+            @include flex(center, space-between);
+        }
+        &-item{
+            padding-right: 31px;
+            i {
+                font-size: 12px;
+                margin-right: 1px;
+            }
+            &:last-child {
+                padding-right: 1px;
+            }
+            &:first-child {
+                i {
+                    margin-right: 4px;
+                }
+            }
+            
+        }
+    }
+    &__bot {
+        a {
+            color: #000000;
+            &:hover {
+                color: #8262b5;
+            }
+        }
+        padding: 20px 0px 19px 30px ;
+        display: flex;
+        align-items: center;
+        &-menu {
+            padding-right: 431px;
+        }
+        &-list {
+            @include flex(center, space-between);
+            line-height: 100%;
+            
+        }
+        &-action {
+            &-list {
+                @include flex(center, space-between);
+            }
+            &-item {
+                padding-right: 30px;
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+            &-link {
+                i {
+                    font-size: 25px;
+                } 
+            }
+        }
+        .logo {
+            margin-right: 312px;
+            padding: 8px 11px 8px 11px;
+            border: 3px solid black;
+            &_text {
+                font-family: $font-family__montserrat;
+                font-weight: 800;
+                font-size: 20px;
+                letter-spacing: 4.5px;
+                
+                padding-left: 5px;
+            }
+            &:hover {
+                color: #000000;
+            }
+        }
+        &-link {
+            font-family: $font-family__montserrat;
+            font-weight: 700;
+            font-size: 14px; 
+            
+        }
+        &-item {
+            padding-right: 55px;
+            &:first-child {
+                padding-right: 54px;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+        // &-item:first-child {
+        //     padding-right: 54px;
+        // }
+        
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.banner {
+    padding-top: 30px;
+    margin: 0 auto;
+    .buy-button {
+            font-family: $font-family__montserrat;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 12.7px 16.5px;
+            background-color: #8262b5;
+            color: #ffffff;
+    }
+    &__item {
+        &-0 {
+            
+            width: 750px;
+            height: 560px;
+            background-image: url('../images/kinh-mat.png');
+
+            .detail {
+                .desc {
+                    font-family: $font-family__pacifico;
+                    font-size: 30px;
+                    font-weight: bold;
+                    text-align: right;
+                    width: 100%;
+                    padding-bottom: 17px;
+                }
+                .buy-button {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+                padding-top: 321px;
+                padding-right: 94px;
+                display: flex;
+                align-items: end;
+                flex-wrap: wrap;
+            }
+        }
+        &-1 {
+            width: 360px;
+            height: 200px;
+            background-image: url('../images/vong-tay.png ');
+            .detail-1, .detail-2 {
+                text-transform: uppercase;
+            }
+            .detail {
+                padding-top: 84px;
+                padding-left: 56px;
+                &-1 {
+                    font-family: $font-family__montserrat;
+                    font-weight: 500;
+                    font-size: 19px;
+                    letter-spacing: 1px;
+                    word-spacing: 2px;
+                    padding-bottom: 4px;
+                    color: #616161;
+                }
+                &-2 {
+                    font-family: $font-family__montserrat;
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: #000000;
+                }
+            }
+        }
+        &-2 {
+            margin-top: 30px;
+            width: 360px;
+            height: 330px;
+            background-image: url('../images/balo.png');
+            .detail-1, .detail-2 {
+                text-transform: uppercase;
+            }
+            .detail {
+                padding-top: 119px;
+                padding-left: 39px;
+                &-1 {
+                    font-family: $font-family__montserrat;
+                    font-weight: 500;
+                    font-size: 19px;
+                    letter-spacing: 1px;
+                    word-spacing: 2px;
+                    padding-bottom: 4px;
+                    color: #616161;
+                }
+                &-2 {
+                    font-family: $font-family__montserrat;
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: #000000;
+                    padding-bottom: 30px;
+                }
+            }
+            .buy-button {
+                margin-left: 3px;
+                padding: 12.7px 15.5px 11px 20px;
+            }
+        }
+    }
+    .container {
+        display: flex;
+    }
+    &__left {
+        padding-right: 30px;
+    }
+    
+}

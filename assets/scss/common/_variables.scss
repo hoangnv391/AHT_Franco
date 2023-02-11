@@ -1,0 +1,25 @@
+
+$baseDir: '../';
+
+// 
+// Fonts
+// _____________________________________
+$font-family-san-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+//
+// Montserrat
+// _____________________________________
+$font-family-name__montserrat: 'Montserrat';
+$font-family__montserrat: $font-family-name__montserrat, $font-family-san-serif;
+
+//
+// OpenSans
+// _____________________________________
+$font-family-name__opensans: 'OpenSans';
+$font-family__opensans: $font-family-name__opensans, $font-family-san-serif;
+
+//
+// Pacifico
+// _____________________________________
+$font-family-name__pacifico: 'Pacifico';
+$font-family__pacifico: $font-family-name__pacifico, $font-family-san-serif;

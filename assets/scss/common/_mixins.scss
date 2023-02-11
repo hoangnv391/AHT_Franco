@@ -1,0 +1,34 @@
+//
+// Fonts
+// _________________________________
+@mixin font-face(
+    $family-name,
+    $font-name,
+    $font-weight: normal,
+    $font-style: normal,
+    $font-display: auto
+){
+    @font-face {
+        font-family: $family-name;
+        src: url('#{$baseDir}fonts/#{$family-name}/ttf/#{$font-name}.ttf')
+                format('truetype'),
+             url('#{$baseDir}fonts/#{$family-name}/woff/#{$font-name}.woff')
+                format('woff'),
+             url('#{$baseDir}fonts/#{$family-name}/woff2/#{$font-name}.woff2')
+                format('woff2');
+        font-weight: $font-weight;
+        font-style: $font-style;    
+    }
+}
+
+
+// 
+// Flex
+// ______________________________
+@mixin  flex($align: flex-start, $justify: flex-start, $wrap: nowrap, $dir: row){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+    flex-direction: $dir;
+}

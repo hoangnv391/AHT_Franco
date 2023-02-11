@@ -1,0 +1,73 @@
+//
+// Fonts
+// ____________________
+
+
+//
+// Montserrat
+// ____________________
+@include font-face(
+    $family-name: $font-family-name__montserrat,
+    $font-name: 'Montserrat-Regular',
+    $font-weight: 400
+);
+
+@include font-face(
+    $family-name: $font-family-name__montserrat,
+    $font-name: 'Montserrat-Medium',
+    $font-weight: 500
+);
+
+@include font-face(
+    $family-name: $font-family-name__montserrat,
+    $font-name: 'Montserrat-SemiBold',
+    $font-weight: 600
+);
+
+@include font-face(
+    $family-name: $font-family-name__montserrat,
+    $font-name: 'Montserrat-Bold',
+    $font-weight: 700
+);
+
+@include font-face(
+    $family-name: $font-family-name__montserrat,
+    $font-name: 'Montserrat-ExtraBold',
+    $font-weight: 800
+);
+
+//
+// OpenSans
+// _____________________
+@include font-face(
+    $family-name: $font-family-name__opensans,
+    $font-name: 'OpenSans-Regular',
+    $font-weight: 400
+);
+
+@include font-face(
+    $family-name: $font-family-name__opensans,
+    $font-name: 'OpenSans-Medium',
+    $font-weight: 500
+);
+
+@include font-face(
+    $family-name: $font-family-name__opensans,
+    $font-name: 'OpenSans-SemiBold',
+    $font-weight: 600
+);
+
+@include font-face(
+    $family-name: $font-family-name__opensans,
+    $font-name: 'OpenSans-Bold',
+    $font-weight: 700
+);
+
+//
+// Pacifico
+// _______________________
+@include font-face (
+    $family-name: $font-family-name__pacifico,
+    $font-name: 'Pacifico-Regular',
+    $font-weight: 400
+);
