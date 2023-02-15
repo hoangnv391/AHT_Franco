@@ -6,6 +6,7 @@
 
 @import './common/reset';
 @import './common/normalize';
+@import './slick/slick.scss';
 
 @import './common/typography';
 
@@ -65,7 +66,7 @@ body {
 }
 
 .wrapper {
-    border: 1px solid black;
+    //border: 1px solid black;
     max-width: 1920px;
     padding: 0;
     margin: 0 auto;
@@ -295,6 +296,294 @@ body {
     }
     &__left {
         padding-right: 30px;
+    } 
+}
+
+.feature {
+    padding-top: 80px;
+    &__title {
+        margin-bottom: 23.292px;
+        p, span {
+            text-transform: uppercase;
+        }
+        p {
+            font-family: $font-family__montserrat;
+            font-weight: 700;
+            font-size: 12px;
+            color: #8262b5;
+            letter-spacing: 6px;
+            padding-bottom: 15px;
+        }
+        span {
+            font-family: $font-family__montserrat;
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 2px;
+            padding-bottom: 23.292px;
+            border-bottom: 1px solid #8262b5;
+            &:last-child {
+                word-spacing: 3px;
+                border: 0;
+            }
+        }  
     }
-    
+    &__product {  
+        .product {
+            &-title {
+                padding-top: 20px;
+                font-family: $font-family__montserrat;
+                font-weight:500;
+                font-size: 14px;
+            }
+            &-rate {
+                padding-top: 8px;
+                padding-bottom: 11px;
+                i {
+                    font-size: 9.5px;
+                    color: #f8bf15;
+                    letter-spacing: -0.8px;
+                }
+            }
+            &-price {
+                margin-left: -1.5px;
+                font-family: $font-family__opensans;
+                font-weight: 400;
+                color: #a5a5a5;
+                font-size: 16px;
+            }
+            &-sale-price {
+                font-family: $font-family__opensans;
+                font-weight: 700;
+                color: #8262b5;
+                font-size: 16px;
+            }
+        }
+        
+        .add-to-cart-button {
+            text-transform: uppercase;
+            font-family: $font-family__montserrat;
+            font-weight: 500;
+            font-size: 12px;
+            padding: 16px 18px 12px 16px;
+            //margin: 16px 16px;
+            color: black;
+            background-color: white;
+            &:hover {
+                color: #8262b5;
+            }
+        }
+        &-item {
+            width: -moz-fit-content;
+            width: fit-content; 
+            position: relative;
+            // .item-1 {
+            //     background-image: url('../images/dong-ho.png');
+            //     width: 262px;
+            //     height: 323px;
+            // }
+            .add-to-cart-button {
+                position: absolute;
+                left: 6px;
+                top: 278px;
+            }
+        }
+        &-row {
+            &-1, &-2  {
+                padding-top: 52px;
+                @include flex(center, space-between);
+                .item {
+                    &-1, &-2, &-3, &-4 {
+                        width: 262px;
+                        height: 323px;
+                    }
+                }
+            }
+            &-1 {
+                .item {
+                    &-1 {
+                        background-image: url('../images/dong-ho.png');
+                    }
+                    &-2 {
+                        background-image: url('../images/tui-deo-vai.png');
+                    }
+                    &-3 {
+                        background-image: url('../images/balo-da.png');
+                    }
+                    &-4 {
+                        background-image: url('../images/ao-khoac-dai.png');
+                    }
+                }
+            }
+            &-2 {
+                padding-top: 48px;
+                .item {
+                    &-1 {
+                        background-image: url('../images/tui-du-lich.png');
+                    }
+                    &-2 {
+                        background-image: url('../images/dep-le.png');
+                    }
+                    &-3 {
+                        background-image: url('../images/tui-sach-tay.png');
+                    }
+                    &-4 {
+                        background-image: url('../images/balo-da-nu.png');
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog {
+    background-image: url('../images/blog-background.png');
+    height: 708px;
+    margin-top: 78px;
+    &__top {
+        text-align: center;
+        text-transform: uppercase;
+        &-desc {
+            font-family: $font-family__opensans;
+            font-weight: 500;
+            font-size: 13px;
+            color: #8262b5;
+            letter-spacing: 6px;
+            padding-left: 7px;
+            padding-top: 75px;
+        }
+        &-title {
+            font-family: $font-family__montserrat;
+            font-weight: 700;
+            font-size: 24px;
+            color: black;
+            padding-top: 15px;
+            letter-spacing: 2px;
+            word-spacing: 2.1px;
+            padding-left: 3px;
+            padding-bottom: 18px;
+        }
+        &-line {
+            height:1px;
+            border-width:0;
+            background-color:#8262b5;
+            width: 50px;
+        }
+    }
+    &__bottom {
+        padding-top: 22px;
+        @include flex(center, center);
+        &-line {
+            //height:1px;
+            // border-width:0;
+            // background-color:#8262b5;
+            // width: 50px;
+        }
+        .blog-item {
+            position: relative;
+            .blog-detail, .blog-info {
+                max-width: 360px;
+                background-color: white;
+            }
+            .date {
+                color:red;
+                position: absolute;
+                top: 8px;
+                left: 16px;
+            } 
+            .blog-detail {
+                padding: 19px 20px 9px 20px;
+                .blog {
+                    &-title {
+                        font-family: $font-family__montserrat;
+                        font-weight: 400;
+                        font-size: 16px;
+                        &:hover {
+                            font-weight: 700;
+                            color: #8262b5;
+                            transition: all 100ms linear ;
+                        }
+                    }
+                    &-desc {
+                        padding-top: 20px;
+                        font-family: $font-family__opensans;
+                        font-weight: 400;
+                        font-size: 14px;
+                        letter-spacing: 0.1px;
+                        word-spacing: 1px;
+                        line-height: 21.2px;
+                    }
+                }
+            }
+            .blog-info {
+                padding-top: 9px;
+                padding-left: 22px;
+                span {
+                    font-family: $font-family__opensans;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+                i {
+                    font-size: 14px;
+                }
+                .comment {
+                    padding-left: 2px;
+                    margin-right: 28px;
+                }
+                .reaction {
+                    padding-left: 5px;
+                }
+            }
+        }
+        .blog-slider {
+            width: 1170px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 20px;
+            padding-bottom: 60px;
+        }
+        .slick-dots {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 0 20px;
+        }
+        .slick-initialized .slick-slide {
+            /* background-color: yellowgreen; */
+            margin: 0 15px;
+            background-color: white;
+        }
+
+        .slick-dots {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 0 15px;
+        }
+        
+        .slick-dots button {
+            padding: 0;
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 100rem;
+            background-color: #b3a6c7;
+            border: 0;
+            outline: none;
+        }
+        
+        .slick-dots .slick-active button {
+            background-color: #8262b5;
+            scale: 1.4;
+        }
+
+    }
 }
